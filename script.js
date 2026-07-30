@@ -6,7 +6,7 @@ const year = document.querySelector("[data-year]");
 const closeMenu = () => {
   if (!menuToggle || !navigation) return;
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "OtwĂłrz menu");
+  menuToggle.setAttribute("aria-label", "Otwórz menu");
   navigation.classList.remove("is-open");
   document.body.classList.remove("menu-open");
 };
@@ -15,7 +15,7 @@ if (menuToggle && navigation) {
   menuToggle.addEventListener("click", () => {
     const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
     menuToggle.setAttribute("aria-expanded", String(!isOpen));
-    menuToggle.setAttribute("aria-label", isOpen ? "OtwĂłrz menu" : "Zamknij menu");
+    menuToggle.setAttribute("aria-label", isOpen ? "Otwórz menu" : "Zamknij menu");
     navigation.classList.toggle("is-open", !isOpen);
     document.body.classList.toggle("menu-open", !isOpen);
   });
